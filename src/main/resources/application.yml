@@ -1,0 +1,20 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: spring-cloud-nacos-consumers
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_HOST}:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+# 日志
+logging:
+  file: /application/applogs/consumers.log
